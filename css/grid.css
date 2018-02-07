@@ -1,0 +1,17 @@
+/* grid style that splits our content in 12 columns */
+
+/* .row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-in-grid{
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+  width: 30%;
+}
+.content-in-grid > *{
+  margin-bottom: 10px;
+} */
