@@ -1,6 +1,6 @@
 <!-- Project 02
 Authors: Yang Zhang, Randy Panopio
-IAT 339 
+IAT 339
  -->
 
 <!DOCTYPE html>
@@ -10,7 +10,12 @@ IAT 339
     <meta charset="utf-8">
 
     <title>P01 Process - Styleguide</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans|Raleway" rel="stylesheet">
 </head>
 
 <body>
@@ -69,9 +74,11 @@ IAT 339
         </div>
 
         <div class="size3of4">
+          <div class ="row">
             <section id="typography">
                 <h2>Typography</h2>
                 <div class="main-content-font">
+                  <div class="">
                     <h1>
                         Header Level I
                     </h1>
@@ -81,6 +88,8 @@ IAT 339
                     <h3>
                         Header Level III
                     </h3>
+                  </div>
+                  <div class ="">
                     <h3 id="neo-latina">Neo Latina</h3>
                     <h3>Content</h3>
                     <p>
@@ -90,8 +99,13 @@ IAT 339
                         machines, and it ensures exercisers to compete training tasks correctly without trainers on the site.
                     </p>
                     <h3 id="din-pro-regular">DINPro Light</h3>
+                  </div>
+
+
                 </div>
             </section>
+          </div>
+
 
             <section id="color">
                 <h2>Color</h2>
@@ -117,7 +131,7 @@ IAT 339
                     </div>
                     <p>#FFFFFF</p>
                 </div>
-
+                <h2>Misc Colours</h2>
                 <h3>Text Color</h3>
                 <div class="text-color">
                     <div id="dark">
@@ -126,6 +140,31 @@ IAT 339
                     <div id="black">
                     </div>
                     <p>#000000</p>
+                </div>
+                <div class="row">
+                  <div class="content-in-grid">
+                    <h3>Highlights</h3>
+                    <div class="highlights">
+                        <div id="light1">
+                        </div>
+                        <p>#aab3ab</p>
+                        <div id="light2">
+                        </div>
+                        <p>#eee0b7</p>
+                    </div>
+                  </div>
+                  <div class="content-in-grid">
+                    <h3>Texture Colours</h3>
+                    <div class="texture">
+                        <div id="texture1">
+                        </div>
+                        <p>#e8caaf</p>
+                        <div id="texture2">
+                        </div>
+                        <p>#66442c</p>
+                    </div>
+                  </div>
+
                 </div>
             </section>
 
@@ -157,6 +196,25 @@ IAT 339
                 <button class="nav-button">Nav Button</button>
                 <button class="cta-button">Call To Action</button>
             </section>
+            <section>
+              <h2>Other Button Stylings</h2>
+
+              <div class="row">
+                <div class="content-in-grid">
+                  <h3>Rendered element:</h3>
+                  <button class="buttonstyle1" type="button">Style 1</button>
+                </div>
+                <div class="content-in-grid">
+                  <h3>CSS selector:</h3>
+                  <p>".buttonstyle1"</p>
+                </div>
+                <div class="content-in-grid">
+                  <h3>Sample code:</h3>
+                  <code>&lt;button class="buttonstyle1" type="button"&gt;Button Style&lt;/button&gt;</code>
+                </div>
+              </div>
+
+            </section>
 
 
             <section id="link">
@@ -173,6 +231,23 @@ IAT 339
                             <a class="intext" href="">In-text Link</a>
                         </span>venenatis dapibus posuere velit aliquet.
                     </p>
+                    <div class="row">
+                      <div class="content-in-grid">
+                        <h3>Rendered element:</h3>
+                        <div class="link-container">
+                          <a class="links" href="#">link text</a>
+                        </div>
+                      </div>
+                      <div class="content-in-grid">
+                        <h3>CSS selector:</h3>
+                        <p>"a" or ".links"</p>
+                      </div>
+                      <div class="content-in-grid">
+                        <h3>Sample code:</h3>
+                        <code>&lt;a href="#" class="links"&gt;link text&lt;/a&gt;</code>
+                      </div>
+                    </div>
+
             </section>
 
             <section id="form">
@@ -201,6 +276,125 @@ IAT 339
                         <input type="submit" value="submit" id="submit">
 
                     </form>
+            </section>
+            <section>
+              <h2>Text Input Field</h2>
+              <div class="row">
+                <div class="content-in-grid">
+                  <h3>Rendered element:</h3>
+                  <div class="input-style">
+                    Search nearby address: <input type="text" name="address">
+                  </div>
+
+                </div>
+                <div class="content-in-grid">
+                  <h3>CSS selector:</h3>
+                  <p>".input-style"</p>
+                </div>
+                <div class="content-in-grid">
+                  <h3>Sample code:</h3>
+                  <code>&lt;div class="input-style"&gt;<br />
+                    Search nearby address: &lt;input type="text" name="address"&gt;<br />
+                  &lt;/div&gt;</code>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>Other Navigation Bar</h2>
+              <p>
+                Different style of nav bar
+              </p>
+              <h3>Rendered content:</h3><br />
+              <div class="row">
+                <div class="main-header">
+                  <ul class="">
+                    <li class="active">
+                        <a href="#">Navigation Menu Item A</a>
+                    </li>
+                    <li>
+                        <a href="#">Navigation Menu Item B</a>
+                    </li>
+                    <li>
+                        <a href="#">Navigation Menu Item C</a>
+                    </li>
+                    <li>
+                        <a href="#">Navigation Menu Item D</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="content-in-grid">
+                  <h3>CSS selector:</h3>
+                  <p>".main-header"</p>
+                </div>
+                <div class="content-in-grid">
+                  <h3>Sample code:</h3>
+                  <code>&lt;ul class="main-header"&gt;<br />
+                    &lt;li&gt;&lt;a href="#" &gt;Nav Menu Item A&lt;/a&gt;&lt;/li&gt;<br />
+                    &lt;li&gt;&lt;a href="#" &gt;Nav Menu Item B&lt;/a&gt;&lt;/li&gt;<br />
+                  &lt;/ul&gt;</code>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2>Product Listing</h2>
+              <div class="row">
+                <div class="content-in-grid">
+                  <div class="product-listing">
+                    <img src="img/product.png" alt="product">
+                    <h2>Model A</h2>
+                    <hr />
+                    <div id="listing-row">
+                      <h3>Price</h3>
+                      <p>
+                        $49.99
+                      </p>
+                    </div>
+                    <div id="listing-center-wrapper">
+                      <button class="buttonstyle1" type="button">Learn More</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-in-grid">
+                  <div class="product-listing">
+                    <img src="img/product.png" alt="product">
+                    <h2>Model B</h2>
+                    <hr />
+                    <div id="listing-row">
+                      <h3>Price</h3>
+                      <p>
+                        $99.99
+                      </p>
+                    </div>
+                    <div id="listing-center-wrapper">
+                      <button class="buttonstyle1" type="button">Learn More</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content-in-grid">
+                  <div class="product-listing">
+                    <img src="img/product.png" alt="product">
+                    <h2>Model C</h2>
+                    <hr />
+                    <div id="listing-row">
+                      <h3>Price</h3>
+                      <p>
+                        $159.99
+                      </p>
+                    </div>
+                    <div id="listing-center-wrapper">
+                      <button class="buttonstyle1" type="button">Learn More</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
             </section>
 
             <section id="imagery">

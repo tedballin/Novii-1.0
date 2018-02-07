@@ -26,7 +26,7 @@ footer,
 section,
 article,
 div {
-  /* defult:content-box, border-box sets the full width of all parts of elements: content,padding, borders 
+  /* defult:content-box, border-box sets the full width of all parts of elements: content,padding, borders
     eg. 300px is the full width, no matter what */
   box-sizing: border-box;
 }
@@ -161,6 +161,9 @@ a:hover {
   margin-left: 5%;
 }
 
+
+
+
 .side-nav li {
   margin: 1rem 1rem;
   font-size: 1rem;
@@ -237,6 +240,11 @@ a:hover {
   display: flex;
   flex-direction: column;
 justify-content: space-around
+}
+
+/* override style from style 2  */
+.link-container a{
+  color: #484848;
 }
 
 /*    id    */
@@ -326,7 +334,7 @@ justify-content: space-around
 }
 
 #user-flow{
-  margin: 2rem; 
+  margin: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
