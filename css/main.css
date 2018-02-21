@@ -15,18 +15,30 @@
     src: url("../font/DINPro-Regular.otf") format("opentype");
 }
 
-body {
-    font-family: 'DINPro Regular', Helvetica, sans-serif;
-    font-size: 1.25rem;
+html {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
 }
 
-header,
-nav,
-footer,
-section,
-article,
-div {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'DINPro Regular', Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #484848;
+}
+
+/* safe cap */
+
+img,
+embed object,
+video {
+    max-width: 100%;
 }
 
 nav a,
@@ -36,13 +48,14 @@ button {
     min-height: 48px;
 }
 
-a{
-    text-decoration: none;      
+a {
+    text-decoration: none;
 }
 
-a:active, a:hover, a:focus {
-	color: rgb(50,0,0); 
-	text-decoration: none;
+a:active,
+a:hover,
+a:focus {
+    color: #1A2948;
 }
 
 ul {
@@ -52,14 +65,16 @@ ul {
 h1,
 h2,
 h3 {
-    font-family: "Neo Latina";
-}
-
-p {
+    /* neo latina doesnt show numbers  */
+    /* font-family: "Neo Latina"; */
     font-family: "DINPro Regular";
 }
 
-video{
+p {
+    font-family: "DINPro Light";
+}
+
+video {
     position: relative;
     margin: 0;
     padding: 0;
@@ -69,11 +84,36 @@ video{
     height: auto;
 }
 
-/*
- *
- * Grid view
- *
- */
+/*  Gris System */
+
+/* flex and width
+* To do - media queries, I'll do it next submission
+*/
+
+/* use this to wrap content with whitespace padding wrap entire content with this usually */
+
+.container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* dont want to break other images so ill just do the image style here */
+
+.container img {
+    width: 100%;
+}
+
+/* turns content into flex - align content into a row */
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
 
 [class*="col-"] {
     padding: 0;
@@ -81,84 +121,329 @@ video{
 }
 
 .col-1 {
-    width: 8.33%;
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
 }
 
 .col-2 {
-    width: 16.66%;
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
 }
 
 .col-3 {
-    width: 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 
 .col-4 {
-    width: 33.33%;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
 }
 
 .col-5 {
-    width: 41.66%;
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
 }
 
 .col-6 {
-    width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
 }
 
 .col-7 {
-    width: 58.33%;
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
 }
 
 .col-8 {
-    width: 66.66%;
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
 }
 
 .col-9 {
-    width: 75%;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
 }
 
 .col-10 {
-    width: 83.33%;
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
 }
 
 .col-11 {
-    width: 91.66%;
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+    ;
 }
 
 .col-12 {
-    width: 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* use this to center a div */
+
+.center-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* end of grid */
+
+/*
+ *
+ * header classes
+ *
+ */
+
+.contain_all {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: linear-gradient(to bottom right, #1A2948, #3CA0CA);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0 1.5rem;
+    /* position: fixed;
+    z-index:10; */
+}
+
+.header_navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav_main ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav_main li {
+    margin-left: 3rem;
+}
+
+.nav_main a {
+    color: #fff;
+}
+
+.nav_main a:hover,
+a:focus,
+a:active {
+    color: #525c65;
+    transition: ease-out 0.3s;
 }
 
 /*
  *
- * classes
+ * hero classes
  *
  */
 
- .contain_all{
-     display: flex;
-     flex-direction: column;
- }
- 
- .header{
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    /* position: fixed;
-    z-index:10; */
-  }
-
- .nav_main ul{
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
-  .nav_main li{
-    margin-left: 1rem;
-  }
-
-  .features{
+.video_promo {
     display: flex;
     flex-wrap: wrap;
-  }
-  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero_text {
+    position: absolute;
+    max-width: 50%;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*
+ *
+ * feature classes
+ *
+ */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature_column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.icon {
+    flex: 0 0 100%;
+}
+
+.feature_column img {
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+}
+
+.features h1 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #3CA0CA;
+}
+
+/*
+ *
+ * testimonial
+ *
+ */
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+ *
+ * join today cta
+ *
+ */
+
+.cta {
+    padding: 5rem;
+    background-image: url('../img/banner.jpg');
+}
+
+.cta_content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #fff;
+}
+
+/*
+ *
+ * footer
+ *
+ */
+
+.footer {
+    background: rgb(236, 246, 248);
+    padding: 5rem 0;
+}
+
+.footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer_nav{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.footer_col ul{
+    display: flex;
+    flex-direction: column;
+}
+.footer_col li{
+    margin: .5rem 0;
+}
+.footer_col img{
+   padding: 1rem;
+}
+
+/* about styles */
+
+.hero-about {
+    display: table-cell;
+    vertical-align: middle;
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 10em;
+    background: url("../img/placeholder_wide.jpg") no-repeat center;
+    background-color: #333333;
+    background-size: cover;
+}
+
+/* map styles */
+
+/* https://www.ostraining.com/blog/coding/responsive-google-maps/ */
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    max-height: 10%;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* product listing style */
+
+.product-listing {
+    background-color: #FFFFFF;
+    max-width: 15rem;
+    padding: 10px;
+}
+
+.product-listing img {
+    max-width: 15rem;
+}
+
+.price-style {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.product-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* buttons  */
+
+a.nav-button {
+    padding: .5rem 1.5rem;
+    color: #3CA0CA;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 3px 5px 20px 0px #333;
+}
+
+.cta-button {
+    padding: .5rem 1.5rem;
+    width: 100px;
+    border-radius: 5px;
+    background: #3CA0CA;
+    color: white;
+    box-shadow: 3px 5px 20px 0px #333;
+}
