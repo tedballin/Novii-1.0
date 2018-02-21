@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novii - Ultimate Fitness Solution</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
@@ -11,45 +11,51 @@
 
 <body>
     <div class="col-12 contain_all">
-      <header class="col-12 header">
-          <div class="col-3 header_logo">
-            <a href="index.html"> <img src="img/logo.png" alt="icon"></a>
-          </div>
-          <nav class="col-9 nav_main">
-              <ul>
-                  <li class="nav__item">
-                      <a href="about.html">About</a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="product.html">Product</a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="blog.html">Blog</a>
-                  </li>
-                  <li class="nav__item">
-                      <a href="contact.html">Contact</a>
-                  </li>
-              </ul>
-          </nav>
-      </header>
+        <header class="col-12 header">
+            <div class="col-12 header_navbar">
+                <div class="col-3 header_logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="icon">
+                    </a>
+                </div>
+                <nav class="col-9 nav_main">
+                    <ul>
+                        <li class="nav_item">
+                            <a href="about.html">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="product.html">Product</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="nav-button" href="product.html">My Journey</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
         <section class="col-12 hero">
             <div class="video_promo">
-                <video id="herp_video" autoplay="autoplay" muted loop>
-                    <source src="https://www.snclubs.com/content/themes/sn/videos/sn_commercial3.mp4" type="video/mp4">
-                </video>
-
                 <div class="hero_text">
                     <h1>Ulitimate Fitness Solution</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh diam, dapibus id consequat eget, convallis
                         vitae justo. Ut ut purus id neque finibus placerat ut at dui.</p>
-                    <a class="btn_primary" href="#">Start Training Today</a>
+                    <a class="cta-button" href="#">Start Training Today</a>
                 </div>
+                <video id="herp_video" autoplay="autoplay" muted loop>
+                    <source src="https://www.snclubs.com/content/themes/sn/videos/sn_commercial3.mp4" type="video/mp4">
+                </video>
             </div>
-
         </section>
+
         <section class="col-12 features">
-            <h2 class="col-12">Why Novii</h2>
+            <h1 class="col-12">Why Novii</h1>
             <div class="col-6 feature_column">
                 <div class="icon">
                     <img src="img/up-arrow.png" alt="feature icon">
@@ -90,28 +96,29 @@
                 <img src="img/feature-placeholder.jpg" alt="placeholder">
             </div>
         </section>
-        <section class="testimonial">
-            <div class="col-12">
-                <h4>Our Novii Community</h4>
-                <div id="testimonial_content">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam
-                        mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque
-                        mattis, eu tristique sem rutrum."</p>
-                    <h6>- Jeff, Trainer</h6>
-                    <img src="img/users.png" alt="user icon">
-                </div>
+
+        <section class="col-12 testimonial">
+            <h4>Our Novii Community</h4>
+            <div class="slides">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris
+                    bibendum orci."</p>
+                <h6>- Jeff, Trainer</h6>
             </div>
+            <div class="slides">
+                <p>"Sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum."</p>
+                <h6>- Jordan, Trainee</h6>
+            </div>
+            <img src="img/users.png" alt="user icon" width="150">
         </section>
-        <section class="cta_bottom">
-            <div class="col-12">
-                <div class="cta_content">
-                    <h1>Join Today</h1>
-                    <p>
-                        Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla.
-                    </p>
-                    <a class="btn_primary"> </a>
-                </div>
+
+        <section class="col-12 cta">
+            <div class="cta_content">
+                <h2>Contact Us</h2>
+                <p>
+                    Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla.
+                </p>
             </div>
+            <a class="cta-button">Contact Us</a>
         </section>
 
         <footer class="footer">
@@ -120,27 +127,28 @@
                     <li class="footer_col">
                         <h3>Contact</h3>
                         <ul>
-                        <a href="#" alt="phone number">+1 (778) 778 - 0000</a>
-                    </ul>
-                    <ul>
-                        <a href="mailto:info@novii.com" alt="novii email">info@novii.com</a>
-                    </ul>
-                    <ul>
-                        <a href="#" alt="novii address">
-                            suite #2018,<br>
-                            1008 W Pender St,<br>
-                            Vancouver,BC
-                        </a>
-                    </ul>
+                        <li><a href="#" alt="phone number">+1 (778) 778 - 0000</a></li>
+                        <li><a href="mailto:info@novii.com" alt="novii email">info@novii.com</a></li>
+                        <li><a href="#" alt="novii address">
+                            suite #2018,
+                            <br> 1008 W Pender St,
+                            <br> Vancouver,BC
+                        </a></li>
+                        </ul>
                     </li>
+
                     <li class="footer_col">
                         <h3>Social Media</h3>
+                        <img class="sm-img" src="img/twitter.png" alt="social media icon">
+                        <img class="sm-img" src="img/instagram.png" alt="social media icon">
+                        <img class="sm-img" src="img/linkedin.png" alt="social media icon">
+                        <img class="sm-img" src="img/facebook.png" alt="social media icon">
                     </li>
                 </ul>
             </div>
         </footer>
-
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
