@@ -31,3 +31,20 @@ function carousel() {
     crsl[slideIndex-1].style.display = "block"; 
     setTimeout(carousel, 2000); 
 }
+
+//sticky header
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("site_header");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+// Open the nav when the menu icon is clicked.
+
