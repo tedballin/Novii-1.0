@@ -15,14 +15,14 @@
 <body>
 
     <!-- navigation -->
-    <header class="col-12 header">
-        <div class="col-12 header_navbar">
-            <div class="col-3 header_logo">
+    <header class="col-12 header" id="site_header">
+        <div class="header_navbar">
+            <div class="col-2">
                 <a href="index.html">
-                    <img src="img/logo.png" alt="icon">
+                    <img class="header_logo" src="img/logo_horizontal.png" alt="icon">
                 </a>
             </div>
-            <nav class="col-9 nav_main">
+            <nav class="col-10 nav_main">
                 <ul>
                     <li class="nav_item">
                         <a href="about.html">About</a>
@@ -34,13 +34,17 @@
                         <a href="blog.html">Blog</a>
                     </li>
                     <li class="nav_item">
-                        <a href="contact.html">Contact</a>
+                        <a class="active" href="contact.html">Contact</a>
                     </li>
                     <li class="nav_item">
-                        <a class="nav-button" href="product.html">My Journey</a>
+                        <buotton class="nav-button" href="product.html">My Journey</button>
                     </li>
                 </ul>
             </nav>
+            <div class="menu_icon">
+                <a href="javascript:void(0);" onclick="myFunction()">&#9776</a>
+            </div>
+
         </div>
     </header>
 
@@ -49,7 +53,7 @@
 
         <div class="container">
 
-            <div class="row">
+            <div class="col-12 row_container">
                 <div class="col-6 center-auto">
                     <div class="map-responsive">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1301.2278570133221!2d-123.11817686816609!3d49.28670988102161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548671824a6b0e83%3A0xd066188075702753!2s1008+W+Pender+St+%232018%2C+Vancouver%2C+BC+V6E!5e0!3m2!1sen!2sca!4v1518992723812"
@@ -58,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row_container">
                 <div class="col-6 center-auto">
                     <form  class= "contact" action="index.html" method="post" id="add-form">
                         <label for="name">Name</label>
@@ -87,7 +91,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer">
+    <footer class="row_container footer">
         <div class="col-12 footer_nav">
             <ul>
                 <li class="footer_col">
@@ -108,13 +112,23 @@
                         </li>
                     </ul>
                 </li>
-
+                <li class="footer_col">
+                    <p>Novii &copy 2018 All Rights Reserved</p>
+                </li>
                 <li class="footer_col">
                     <h3>Social Media</h3>
-                    <img class="sm-img" src="img/twitter.png" alt="social media icon">
-                    <img class="sm-img" src="img/instagram.png" alt="social media icon">
-                    <img class="sm-img" src="img/linkedin.png" alt="social media icon">
-                    <img class="sm-img" src="img/facebook.png" alt="social media icon">
+                    <a href="#">
+                        <img class="sm-img" src="img/facebook.png" alt="social media icon">
+                    </a>
+                    <a href="#">
+                        <img class="sm-img" src="img/twitter.png" alt="social media icon">
+                    </a>
+                    <a href="#">
+                        <img class="sm-img" src="img/instagram.png" alt="social media icon">
+                    </a>
+                    <a href="#">
+                        <img class="sm-img" src="img/linkedin.png" alt="social media icon">
+                    </a>
                 </li>
             </ul>
         </div>
