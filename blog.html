@@ -14,31 +14,42 @@
 <body >
 
   <!-- navigation -->
-  <header class="col-12 header">
-      <div class="col-3 header_logo">
-        <a href="index.html"> <img src="img/logo.png" alt="icon"></a>
-      </div>
-      <nav class="col-9 nav_main">
-          <ul>
-              <li class="nav__item">
-                  <a href="about.html">About</a>
-              </li>
-              <li class="nav__item">
-                  <a href="product.html">Product</a>
-              </li>
-              <li class="nav__item">
-                  <a href="blog.html">Blog</a>
-              </li>
-              <li class="nav__item">
-                  <a href="contact.html">Contact</a>
-              </li>
-          </ul>
-      </nav>
-  </header>
+  <header class="col-12 header" id="site_header">
+    <div class="header_navbar">
+        <div class="col-2">
+            <a href="index.html">
+                <img class="header_logo" src="img/logo_horizontal.png" alt="icon">
+            </a>
+        </div>
+        <nav class="col-10 nav_main">
+            <ul>
+                <li class="nav_item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="nav_item">
+                    <a href="product.html">Product</a>
+                </li>
+                <li class="nav_item">
+                    <a class="active" href="blog.html">Blog</a>
+                </li>
+                <li class="nav_item">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="nav_item">
+                    <buotton class="nav-button" href="product.html">My Journey</button>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu_icon">
+            <a href="javascript:void(0);" onclick="myFunction()">&#9776</a>
+        </div>
+
+    </div>
+</header>
 
   <!-- core content -->
   <section id="blog">
-    <div class="container center-auto">
+    <!-- <div class="container center-auto">
 
       <div class ="row">
         <div class ="col-4">
@@ -123,36 +134,95 @@
       </div>
 
 
-    </div>
+    </div> -->
+
+    	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row_container"> 
+					
+					<!-- Content -->
+					<div id="content" class="col-6 center-auto">
+							<header>
+								<h2>Welcome to Novii!</h2>
+								<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+							</header>
+							<p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor.</p>
+              <img src="img/ph1.jpeg" alt="" />
+            </div>
+					
+					<!-- Sidebar -->
+					<div id="sidebar" class="col-4 center-auto">
+							<header>
+								<h2>Nullam non wisi a sem eleifend</h2>
+							</header>
+							<ul class="style">
+								<li>
+									<p class="posted">August 11, 2017  |  (10 )  Comments</p>
+									<img src="img/mockup.png" alt="" />
+									<p class="text">Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+								</li>
+								<li>
+									<p class="posted">August 11, 2017 |  (10 )  Comments</p>
+									<img src="img/mockup.png" alt="" />
+									<p class="text"> Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+								</li>
+								<li>
+									<p class="posted">August 11, 2017  |  (10 )  Comments</p>
+									<img src="img/mockup.png" alt="" />
+									<p class="text"> Donec mattis libero eget urna. Pellentesque viverra enim.</p>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
   </section>
 
   <!-- footer -->
-  <footer class="footer">
-      <div class="col-12 footer_nav">
-          <ul>
-              <li class="footer_col">
-                  <h3>Contact</h3>
-                  <ul>
-                  <a href="#" alt="phone number">+1 (778) 778 - 0000</a>
-              </ul>
-              <ul>
-                  <a href="mailto:info@novii.com" alt="novii email">info@novii.com</a>
-              </ul>
-              <ul>
-                  <a href="#" alt="novii address">
-                      suite #2018,<br>
-                      1008 W Pender St,<br>
-                      Vancouver,BC
-                  </a>
-              </ul>
-              </li>
-              <li class="footer_col">
-                  <h3>Social Media</h3>
-              </li>
-          </ul>
-      </div>
-  </footer>
+  <footer class="col-12 row_container footer">
+    <div class="col-12 footer_nav">
+        <ul>
+            <li class="footer_col">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <a href="#" alt="phone number">+1 (778) 778 - 0000</a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@novii.com" alt="novii email">info@novii.com</a>
+                    </li>
+                    <li>
+                        <a href="#" alt="novii address">
+                            suite #2018,
+                            <br> 1008 W Pender St,
+                            <br> Vancouver,BC
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer_col">
+                <p>Novii &copy 2018 All Rights Reserved</p>
+            </li>
+            <li class="footer_col">
+                <h3>Social Media</h3>
+                <a href="#">
+                    <img class="sm-img" src="img/facebook.png" alt="social media icon">
+                </a>
+                <a href="#">
+                    <img class="sm-img" src="img/twitter.png" alt="social media icon">
+                </a>
+                <a href="#">
+                    <img class="sm-img" src="img/instagram.png" alt="social media icon">
+                </a>
+                <a href="#">
+                    <img class="sm-img" src="img/linkedin.png" alt="social media icon">
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
 
 
 </body>
