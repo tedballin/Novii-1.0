@@ -1,144 +1,165 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-sacle=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novii - Ultimate Fitness Solution</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="col-12 contain_all">
-        <header class="col-12 header">
-            <div class="col-3 header_logo">
-                <img src="img/logo.png" alt="icon">
-            </div>
-            <nav class="col-9 nav_main">
-                <ul>
-                    <li class="nav__item">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#">Product</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#">Blog</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#">Contact</a>
-                    </li>
+    <div class="row_container">
+      <header class="col-12 header" id="site_header">
+        <div class="header_navbar">
+          <div class="col-2">
+            <a href="index.html">
+                        <img class="header_logo" src="img/logo_horizontal.png" alt="icon">
+                    </a>
+          </div>
+          <nav class="col-10 nav_main">
+
+            <div tabindex="0" class="onclick-menu">
+                <ul class="onclick-menu-content">
+                  <li class="nav_item">
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="product.html">Product</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav-button" href="product.html">My Journey</a>
+                  </li>
                 </ul>
-            </nav>
-        </header>
-
-        <section class="col-12 hero">
-            <div class="video_promo">
-                <video id="herp_video" autoplay="autoplay" muted loop>
-                    <source src="https://www.snclubs.com/content/themes/sn/videos/sn_commercial3.mp4" type="video/mp4">
-                </video>
-
-                <div class="hero_text">
-                    <h1>Ulitimate Fitness Solution</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nibh diam, dapibus id consequat eget, convallis
-                        vitae justo. Ut ut purus id neque finibus placerat ut at dui.</p>
-                    <a class="btn_primary" href="#">Start Training Today</a>
-                </div>
             </div>
 
+          </nav>
+        </div>
+      </header>
+
+
+        <section class="video_promo">
+            <div class="col-6 hero_text">
+                <h1>Ulitimate Fitness Solution</h1>
+                <h4>Making personal training professional, more affordable, and effortless.
+                </h4>
+                <a class="cta-button" href="#">Start Training Today</a>
+            </div>
+            <video id="herp_video" autoplay="autoplay" muted loop>
+                <source src="https://www.snclubs.com/content/themes/sn/videos/SN_BEYOND_COMBINED_WEBSITE.mp4" type="video/mp4">
+            </video>
         </section>
-        <section class="col-12 features">
-            <h2 class="col-12">Why Novii</h2>
-            <div class="col-6 feature_column">
-                <div class="icon">
-                    <img src="img/up-arrow.png" alt="feature icon">
-                </div>
-                <h3>Professional training with affordable rate</h3>
+
+        <section class="row_container">
+            <h1 class="col-12">Why Novii</h1>
+            <div class="col-6 feature_column_1">
+                <img class="icon" src="img/icon1.png" alt="feature icon">
+                <h3>Professional training and matching</h3>
                 <p>
-                    Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla. Ut tincidunt massa eu nisi luctus, sit amet ullamcorper
-                    augue tincidunt.
+                    Find the best trainer for you based on trainer’s specialty, location, experience, and rate etc. Get professional guidance
+                    on achiving your training goals.
                 </p>
             </div>
-            <div class="col-6 feature_column">
-                <img src="img/feature-placeholder.jpg" alt="placeholder">
+            <div class="col-6 feature_column_2">
+                <img src="img/f1.jpeg" alt="feature">
             </div>
-            <div class="col-6 feature_column">
-                <img src="img/feature-placeholder.jpg" alt="placeholder">
+            <div class="col-6 feature_column_3">
+                <img class="feature-img" src="img/f2.jpeg" alt="feature">
             </div>
-            <div class="col-6 feature_column">
-                <div class="icon">
-                    <img src="img/up-arrow.png" alt="feature icon">
-                </div>
-                <h3> Train whenever and wherever you like</h3>
+            <div class="col-6 feature_column_4">
+                <img class="icon" src="img/icon2.png" alt="feature icon">
+                <h3> Train whenever and wherever with affordable rate</h3>
                 <p>
-                    Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla. Ut tincidunt massa eu nisi luctus, sit amet ullamcorper
-                    augue tincidunt.
+                    Save over 25% off the training rate at fitness centers with flexible schedule and remote location.
                 </p>
             </div>
-            <div class="col-6 feature_column">
-                <div class="icon">
-                    <img src="img/up-arrow.png" alt="feature icon">
-                </div>
+            <div class="col-6 feature_column_5">
+                <img class="icon" src="img/icon3.png" alt="feature icon">
                 <h3>Effortless progress tracking</h3>
                 <p>
-                    Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla. Ut tincidunt massa eu nisi luctus, sit amet ullamcorper
-                    augue tincidunt.
+                    With both hardware and software, trainers can keep track clients’ progress, and exercisers can view their training plan and
+                    progress.
                 </p>
             </div>
-            <div class="col-6  feature_column">
-                <img src="img/feature-placeholder.jpg" alt="placeholder">
+            <div class="col-6  feature_column_6">
+                <img class="feature-img" src="img/f3.jpeg" alt="feature">
             </div>
         </section>
-        <section class="testimonial">
-            <div class="col-12">
-                <h4>Our Novii Community</h4>
-                <div id="testimonial_content">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam
-                        mauris bibendum orci, sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque
-                        mattis, eu tristique sem rutrum."</p>
-                    <h6>- Jeff, Trainer</h6>
-                    <img src="img/users.png" alt="user icon">
-                </div>
+
+        <section class="col-12 testimonial">
+            <h4>Our Novii Community</h4>
+            <div class="slides">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices, elit sed faucibus pharetra, diam mauris
+                    bibendum orci."</p>
+                <h6>- Jeff, Trainer</h6>
+            </div>
+            <div class="slides">
+                <p>"Sit amet ullamcorper purus dui sit amet augue. Donec aliquet diam ut neque mattis, eu tristique sem rutrum."</p>
+                <h6>- Jordan, Trainee</h6>
+            </div>
+            <img  src="img/users.png" alt="user icon" width="150">
+        </section>
+
+        <section class="col-12 cta">
+            <div class="cta_content">
+                <h2>Contact Us</h2>
+                <p>
+                    If you have a question, we have an answer. If you need something, we'll help you. Contact us anytime. </p>
+                <a class="cta-button">Contact Us</a>
             </div>
         </section>
-        <section class="cta_bottom">
-            <div class="col-12">
-                <div class="cta_content">
-                    <h1>Join Today</h1>
-                    <p>
-                        Curabitur bibendum volutpat malesuada. Nunc mollis condimentum fringilla. 
-                    </p>
-                    <a class="btn_primary"> </a>
-                </div>
-            </div>
-        </section>
-        <footer class="footer">
-            <div class="col-12 footer_nav">
+
+        <footer class="col-12 footer">
+            <div class="footer_nav">
                 <ul>
                     <li class="footer_col">
                         <h3>Contact</h3>
                         <ul>
-                        <a href="#" alt="phone number">+1 (778) 778 - 0000</a>
-                    </ul>
-                    <ul>
-                        <a href="mailto:info@novii.com" alt="novii email">info@novii.com</a>
-                    </ul>
-                    <ul>
-                        <a href="#" alt="novii address">
-                            suite #2018,<br>
-                            1008 W Pender St,<br>
-                            Vancouver,BC
-                        </a>
-                    </ul>
+                            <li>
+                                <a href="#">+1 (778) 778 - 0000</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@novii.com">info@novii.com</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    suite #2018,
+                                    <br> 1008 W Pender St,
+                                    <br> Vancouver,BC
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer_col">
+                        <p>Novii &copy 2018 All Rights Reserved</p>
                     </li>
                     <li class="footer_col">
                         <h3>Social Media</h3>
+                        <a href="#">
+                            <img class="sm-img" src="img/twitter.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/instagram.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/linkedin.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/facebook.png" alt="social media icon">
+                        </a>
                     </li>
                 </ul>
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,164 +1,604 @@
 /* fonts */
 
 @font-face {
-    font-family: "Neo Latina";
-    src: url("../font/neo-latina.ttf");
+  font-family: "Neo Latina";
+  src: url("../font/neo-latina.ttf");
 }
 
 @font-face {
-    font-family: "DINPro Light";
-    src: url("../font/DINPro-Light.otf") format("opentype");
+  font-family: "DINPro Light";
+  src: url("../font/DINPro-Light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "DINPro Regular";
-    src: url("../font/DINPro-Regular.otf") format("opentype");
+  font-family: "DINPro Regular";
+  src: url("../font/DINPro-Regular.otf") format("opentype");
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 body {
-    font-family: 'DINPro Regular', Helvetica, sans-serif;
-    font-size: 1.25rem;
+  font-family: 'DINPro Regular', Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #484848;
 }
 
-header,
-nav,
-footer,
-section,
-article,
-div {
-    box-sizing: border-box;
+/* safe cap */
+
+img, embed object, video {
+  max-width: 100%;
 }
 
-nav a,
-button {
-    /* make sure clickable elements are easy to tap on mobile devices */
-    min-width: 48px;
-    min-height: 48px;
+nav a, button {
+  /* make sure clickable elements are easy to tap on mobile devices */
+  min-width: 48px;
+  min-height: 48px;
 }
 
-a{
-    text-decoration: none;      
+a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 a:active, a:hover, a:focus {
-	color: rgb(50,0,0); 
-	text-decoration: none;
+  color: #1A2948;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Neo Latina";
+h1, h2, h3 {
+  /* neo latina doesnt show numbers  */
+  /* font-family: "Neo Latina"; */
+  font-family: "DINPro Regular";
 }
 
 p {
-    font-family: "DINPro Regular";
+  font-family: "DINPro Light";
 }
 
-video{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    min-width: 100%;
-    z-index: -1;
-    width: 100%;
-    height: auto;
+video {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  z-index: -1;
+  width: 100%;
+  height: auto;
 }
 
-/*
- *
- * Grid view
- *
- */
+section {
+  margin-bottom: 5rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+/*  Grids System */
+
+/* fheader_logoex and width
+* To do - media queries, I'll do it next submission
+*/
+
+/* use this to wrap content with whitespace padding wrap entire content with this usually */
+
+.container {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* dont want to break other images so ill just do the image style here */
+
+.container img {
+  width: 100%;
+}
+
+/* turns content into flex - align content into a row */
+
+.row_container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* start small, mobile */
 
 [class*="col-"] {
-    padding: 0;
-    border: 1px solid red;
+  padding: 0;
+  width: 100%;
+  /* border: 1px solid red; */
 }
 
-.col-1 {
-    width: 8.33%;
+/* hide button on none mobile */
+
+.menu-toggler {
+  display: none;
 }
 
-.col-2 {
-    width: 16.66%;
-}
-
-.col-3 {
-    width: 25%;
-}
-
-.col-4 {
-    width: 33.33%;
-}
-
-.col-5 {
-    width: 41.66%;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-.col-7 {
-    width: 58.33%;
-}
-
-.col-8 {
-    width: 66.66%;
-}
-
-.col-9 {
-    width: 75%;
-}
-
-.col-10 {
-    width: 83.33%;
-}
-
-.col-11 {
-    width: 91.66%;
-}
-
-.col-12 {
-    width: 100%;
-}
-
-/*
- *
- * classes
- *
- */
-
- .contain_all{
-     display: flex;
-     flex-direction: column;
- }
- 
- .header{
+/* media query for menu */
+@media screen and (max-width: 720px) {
+  .onclick-menu {
+    position: relative;
     display: flex;
-    flex-direction:row;
-    align-items: center;
-    /* position: fixed;
-    z-index:10; */
-  }
-
- .nav_main ul{
-    display:flex;
     flex-direction: row;
     justify-content: flex-end;
   }
+  .onclick-menu:before {
+    content: "menu";
+    color: white;
+  }
+  .onclick-menu li{
+    /* so that the menu can be still seen can push more if we want, the bg color opacity helps visibility*/
+    margin-top: 2%;
 
-  .nav_main li{
-    margin-left: 1rem;
+  }
+  .onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+  }
+  .onclick-menu:focus .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .onclick-menu-content {
+    position: absolute;
+    z-index: 1;
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+    /* helps to add visibility */
+    background-color: rgba(50, 50, 50, 0.2);
   }
 
-  .features{
-    display: flex;
-    flex-wrap: wrap;
+}
+
+/* tab + pc size */
+
+@media screen and (min-width: 600px) {
+  .col-1 {
+    -ms-flex: 0 0 8.333333%;
+    flex: 0 0 8.333333%;
+    max-width: 8.333333%;
   }
-  
+  .col-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  .col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .col-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .col-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .col-9 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+  .col-11 {
+    -ms-flex: 0 0 91.666667%;
+    flex: 0 0 91.666667%;
+    max-width: 91.666667%;
+    ;
+  }
+  .col-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* use this to center a div */
+
+.center-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* end of grid */
+
+/*
+ *
+ * header classes
+ *
+ */
+
+.header {
+  background: linear-gradient(to bottom right, #1A2948, #3CA0CA);
+  padding: .5rem 1.5rem;
+  /* position: fixed;]
+    z-index:10; */
+}
+
+.header_navbar {
+  display: flex;
+  align-items: center;
+}
+
+img.header_logo {
+  max-width: 150px !important;
+  /* width: 150px !important; */
+}
+
+/* ..... */
+
+/* .nav_main{
+    position: absolute;
+    background: #464655;
+    top: 100%;
+    right:0%;
+}
+
+.nav_main ul{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+}
+
+.nav_main li:not(:last-child){
+    border-bottom: 1px solid #575766;
+}
+
+.nav_main a{
+    color:white;
+    text-decoration: none;
+    display: block;
+    padding: 2em 6em;
+}
+
+.nav_main a:hover, .nav_main a:focus{
+    background:#3CA0CA;
+}
+
+
+.menu-toggle{
+    padding:1em;
+    position: absolute;
+    right:1em;
+    top: 1em;
+    cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    content: "";
+    display: block;
+    background:#EBEBD3;
+    height:3px;
+    width: 1.5em;
+    border-radius: 3px;
+}
+
+.hamburger::before{
+    transform: translateY(-6px);
+
+}
+
+.hamburger::after{
+    transform: translateY(3px);
+
+} */
+
+/* ..... */
+
+.nav_main ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav_main li {
+  margin-left: 2em;
+}
+
+.nav_main a:hover, a:focus, a:active {
+  color: #1A2948;
+  transition: ease-out 0.3s;
+}
+
+.menu_icon {
+  display: none;
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+
+.active {
+  color: #1A2948;
+  padding-bottom: .25em;
+  border-bottom: 2px solid #1A2948;
+}
+
+/* sticky header */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); */
+}
+
+/*
+ *
+ * hero
+ *
+ */
+
+.video_promo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero_text {
+  position: absolute;
+  text-align: center;
+  padding: 1em;
+}
+
+/*
+ *
+ * feature
+ *
+ */
+
+[class *="feature_column_"] {
+  text-align: center;
+  padding: 1em;
+}
+
+/* change the order under mobile view */
+
+@media screen and (max-width:600px) {
+  .feature_column_3 {
+    order: 3;
+  }
+  .feature_column_4 {
+    order: 2;
+  }
+  .footer_col {
+    width: 100%;
+  }
+}
+
+.icon {
+  width: 150px;
+}
+
+.feature_column img {
+  /* box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); */
+}
+
+.row_container h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: #3CA0CA;
+}
+
+/*
+ *
+ * testimonial
+ *
+ */
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial h4{
+    color: #3CA0CA;
+}
+
+/*
+ *
+ * join today cta
+ *
+ */
+
+.cta {
+  padding: 10em;
+  background: url('../img/banner.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.cta_content {
+  text-align: center;
+  color: #fff;
+}
+
+/*
+ *
+ * footer
+ *
+ */
+
+.footer {
+  background: linear-gradient(to bottom right, #1A2948, #3CA0CA);
+  padding: .25em 0;
+}
+
+.footer_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  justify-content: space-around;
+}
+
+.footer_col {
+  margin: 1em;
+  align-self: center;
+}
+
+.footer_col ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_col a {
+  color: aliceblue;
+}
+
+.footer_col img {
+  width: 60px;
+  padding: .5em;
+}
+
+/* about styles */
+
+.hero-about {
+  display: table-cell;
+  vertical-align: middle;
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding: 10em;
+  background: url("../img/about.png") no-repeat center;
+  background-color: #333333;
+  background-size: cover;
+}
+
+.about-us-section p
+{
+ font-family: "DINPro Regular";
+ font-weight: 100;
+
+}
+/* map styles */
+
+/* https://www.ostraining.com/blog/coding/responsive-google-maps/ */
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* product listing style */
+
+.product-listing {
+  background-color: #FFFFFF;
+  padding: 10px;
+}
+
+/* pushe down the price */
+
+.push-down{
+  overflow: hidden;
+  bottom: 0;
+}
+
+
+.price-style {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.product-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: #3CA0CA;
+}
+
+.contact input[type=text], textarea {
+  border: 2px solid#3CA0CA;
+  border-radius: 5px;
+}
+
+
+
+/* buttons  */
+
+.nav-button {
+  padding: .5em 1em;
+  color: #3CA0CA;
+  background-color: #fff;
+  border-radius: 5px;
+  /* box-shadow: 5px 10px 20px 0px #333; */
+  display: inline;
+  cursor: pointer;
+}
+
+.nav-button:hover, :focus, :active {
+  /* box-shadow: 3px 5px 20px 0px #333; */
+  transition: ease .3s;
+}
+
+.cta-button {
+  /* text-align: center; */
+  padding: .5em 1em;
+  border-radius: 5px;
+  background: #3CA0CA;
+  color: white;
+  /* box-shadow: 3px 5px 20px 0px #333; */
+}
