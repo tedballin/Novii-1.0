@@ -18,7 +18,10 @@
 
 //carousel for testimonial 
 var slideIndex = 0;
-carousel();
+//only run carousel() for index page 
+if (window.location.href.indexOf('index.html') > -1) {
+  carousel();
+}
 
 function carousel() {
     var i;
