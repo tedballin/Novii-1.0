@@ -437,6 +437,9 @@ img.header_logo {
   justify-content: center;
   align-items: center;
 }
+.testimonial h4{
+    color: #3CA0CA;
+}
 
 /*
  *
@@ -506,6 +509,12 @@ img.header_logo {
   background-size: cover;
 }
 
+.about-us-section p
+{
+ font-family: "DINPro Regular";
+ font-weight: 100;
+
+}
 /* map styles */
 
 /* https://www.ostraining.com/blog/coding/responsive-google-maps/ */
@@ -562,6 +571,8 @@ img.header_logo {
   border: 2px solid#3CA0CA;
   border-radius: 5px;
 }
+
+
 
 /* buttons  */
 
