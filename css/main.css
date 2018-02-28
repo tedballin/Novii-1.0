@@ -541,6 +541,12 @@ img.header_logo {
   padding: 10px;
 }
 
+/* pushe down the price */
+
+.push-down{
+  overflow: hidden;
+  bottom: 0;
+}
 
 
 .price-style {
@@ -594,5 +600,5 @@ img.header_logo {
   border-radius: 5px;
   background: #3CA0CA;
   color: white;
-  box-shadow: 3px 5px 20px 0px #333;
+  /* box-shadow: 3px 5px 20px 0px #333; */
 }
