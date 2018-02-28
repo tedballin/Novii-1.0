@@ -538,13 +538,10 @@ img.header_logo {
 
 .product-listing {
   background-color: #FFFFFF;
-  max-width: 15rem;
   padding: 10px;
 }
 
-.product-listing img {
-  max-width: 15rem;
-}
+
 
 .price-style {
   width: 100%;
