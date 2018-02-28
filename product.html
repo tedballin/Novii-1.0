@@ -18,38 +18,39 @@
 
     <body>
         <div class="row_container">
-            <header class="col-12 header" id="site_header">
-                <div class="header_navbar">
-                    <div class="col-2">
-                        <a href="index.html">
+          <header class="col-12 header" id="site_header">
+            <div class="header_navbar">
+              <div class="col-2">
+                <a href="index.html">
                             <img class="header_logo" src="img/logo_horizontal.png" alt="icon">
                         </a>
-                    </div>
-                    <nav class="col-10 nav_main">
-                        <ul>
-                            <li class="nav_item">
-                                <a href="about.html">About</a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="active" href="product.html">Product</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="contact.html">Contact</a>
-                            </li>
-                            <li class="nav_item">
-                                <a class="nav-button" href="product.html">My Journey</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="menu_icon">
-                        <a href="javascript:void(0);" onclick="myFunction()">&#9776</a>
-                    </div>
+              </div>
+              <nav class="col-10 nav_main">
 
+                <div tabindex="0" class="onclick-menu">
+                    <ul class="onclick-menu-content">
+                      <li class="nav_item">
+                        <a href="about.html">About</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="product.html">Product</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="blog.html">Blog</a>
+                      </li>
+                      <li class="nav_item">
+                        <a href="contact.html">Contact</a>
+                      </li>
+                      <li class="nav_item">
+                        <a class="nav-button" href="product.html">My Journey</a>
+                      </li>
+                    </ul>
                 </div>
-            </header>
+
+              </nav>
+            </div>
+          </header>
+
 
             <!-- core content -->
 
@@ -66,66 +67,120 @@
             </div>
 
             <section id="product">
-                <div class="container">
-                    <div class="row_container">
-                        <div class="col-10 center-auto">
-                            <div class="row_container product-row">
 
-                                <div class="col-4 center-auto product-center">
-                                    <div class="product-listing">
-                                        <img src="img/mockup2.png" alt="product">
-                                        <h3>Novii App</h3>
-                                        <hr />
-                                        <div class="price-style">
-                                            <h4>Price</h4>
-                                            <p>
-                                                $19.99
-                                            </p>
-                                        </div>
-                                        <div class="product-center">
-                                            <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 center-auto product-center">
-                                    <div class="product-listing">
-                                        <img src="img/mockup3.png" alt="product">
-                                        <h4>Novi App Pro</h4>
-                                        <hr />
-                                        <div class="price-style">
-                                            <h3>Price</h3>
-                                            <p>
-                                                $49.99
-                                            </p>
-                                        </div>
-                                        <div class="product-center">
-                                            <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-4 center-auto product-center">
-                                    <div class="product-listing">
-                                        <img src="img/hardware.png" alt="product">
-                                        <h4>Novii Hardware</h>
-                                            <hr />
-                                            <div class="price-style">
-                                                <h3>Price</h3>
-                                                <p>
-                                                    $99.99
-                                                </p>
-                                            </div>
-                                            <div class="product-center">
-                                                <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
-                                            </div>
-                                    </div>
-                                </div>
-
-                            </div>
+              <div class="container">
+                <div class ="col-8 center-auto">
+                  <div class="row_container">
+                    <div class="col-4 content-row center-auto">
+                      <div class="product-listing">
+                        <img src="img/mockup2.png" alt="product">
+                        <h3>Novii App</h3>
+                        <hr />
+                        <div class="price-style">
+                            <h4>Price</h4>
+                            <p>
+                                $19.99
+                            </p>
                         </div>
+                        <div class="product-center">
+                            <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                        </div>
+                      </div>
                     </div>
+
+                    <div class="col-4 content-row center-auto">
+                      <div class="product-listing">
+                        <img src="img/mockup3.png" alt="product">
+                        <h4>Novi App Pro</h4>
+                        <hr />
+                        <div class="price-style">
+                            <h3>Price</h3>
+                            <p>
+                                $49.99
+                            </p>
+                        </div>
+                        <div class="product-center">
+                            <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-4 content-row center-auto">
+                      <div class="product-listing">
+                        <img src="img/hardware.png" alt="product">
+                        <h4>Novii Hardware</h>
+                            <hr />
+                            <div class="price-style">
+                                <h3>Price</h3>
+                                <p>
+                                    $99.99
+                                </p>
+                        </div>
+                        <div class="product-center">
+                            <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
+
+
+
+
+              </div>
+
+                      <!-- <div class="col-4 center-auto product-center">
+                          <div class="product-listing">
+                              <img src="img/mockup2.png" alt="product">
+                              <h3>Novii App</h3>
+                              <hr />
+                              <div class="price-style">
+                                  <h4>Price</h4>
+                                  <p>
+                                      $19.99
+                                  </p>
+                              </div>
+                              <div class="product-center">
+                                  <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-4 center-auto product-center">
+                          <div class="product-listing">
+                              <img src="img/mockup3.png" alt="product">
+                              <h4>Novi App Pro</h4>
+                              <hr />
+                              <div class="price-style">
+                                  <h3>Price</h3>
+                                  <p>
+                                      $49.99
+                                  </p>
+                              </div>
+                              <div class="product-center">
+                                  <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-4 center-auto product-center">
+                          <div class="product-listing">
+                              <img src="img/hardware.png" alt="product">
+                              <h4>Novii Hardware</h>
+                                  <hr />
+                                  <div class="price-style">
+                                      <h3>Price</h3>
+                                      <p>
+                                          $99.99
+                                      </p>
+                                  </div>
+                                  <div class="product-center">
+                                      <button class="cta-button" type="button"><a href="contact.html">Learn More</a></button>
+                                  </div>
+                          </div>
+                      </div> -->
+
             </section>
 
             <!-- footer -->
