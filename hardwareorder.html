@@ -15,8 +15,6 @@
 <body>
 
     <!-- navigation -->
-
-    <body>
         <div class="row_container">
           <header class="col-12 header" id="site_header">
             <div class="header_navbar">
@@ -83,36 +81,37 @@
                   </div>
                 <div class="col-8 center-vertically">
                     <form  class= "contact order" action="index.html" method="post" id="add-form">
-                        <label for="name">Full Name</label>
+                        <label>Full Name</label>
                         <div class="contact-row">
-                          <span>First Name</span><input type="text" name="client" required id="client"> <span>Last Name</span><input type="text" name="client" required id="client">
+                          <span>First Name</span><input type="text" name="client" required id="clientf"> <span>Last Name</span><input type="text" name="client" required id="clientl">
                         </div>
 
                         <label for="phone">Contact Number</label>
                         <div class="contact-row">
-                          <span>Area Code</span><input type="text" name="phone" required id="phone"> <span>Phone Number</span><input type="text" name="phone" required id="phone">
+                          <span>Area Code</span><input type="text" name="phone" required id="phone1"> <span>Phone Number</span><input type="text" name="phone" required id="phone">
                         </div>
 
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email">
-                        <label for="service">Product Model</label>
+                        <label>Product Model</label>
                         <select>
                         <option value="-1" selected>Choose option ...</option>
                         <option value="Hardware">Novii Hardware Component Model A</option>
                         <option value="App">Hardware Model Replacement Parts</option>
                         </select>
 
-                        <label for="name">Billing Address</label>
+                        <label>Billing Address</label>
 
-                        <span>Street address</span><input type="text" name="client" required id="client">
-                        <span>Street address 2</span><input type="text" name="client" required id="client">
+                        <span>Street address</span><input type="text" name="add" required id="add">
+                        <span>Street address 2</span><input type="text" name="add" required id="add2">
 
                         <div class="contact-row">
-                          <span>City</span><input type="text" name="client" required id="client"> <span>State / Province</span><input type="text" name="client" required id="client">
+                          <span>City</span><input type="text" name="city" required id="city"> 
+                          <span>State / Province</span><input type="text" name="province" required id="province">
                         </div>
 
                         <div class="contact-row">
-                          <span>Postal / Zip Code</span><input type="text" name="client" required id="client"> <span>Country</span><select>
+                          <span>Postal / Zip Code</span><input type="text" name="zip" required id="zip"> <span>Country</span><select>
                           <option value="-1" selected>Choose option ...</option>
                           <option value="CA">Canada</option>
                           <option value="CH">China</option>
@@ -122,10 +121,10 @@
                         </div>
 
 
-                        <label for="message">Product message</label><br>
+                        <label>Product message</label><br>
                         <textarea rows="3" cols="50">
                         </textarea><br>
-                            <input class ="cta-button" type="submit" value="submit"></input>
+                            <input class ="cta-button" type="submit" value="submit">
                       </form>
                 </div>
 

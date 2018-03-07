@@ -48,6 +48,9 @@
       </div>
     </header>
 
+      <!-- core content -->
+      <section id="contact">
+
     <div class="container">
             <div class="row_container">
                 <div class="col-8 center-auto">
@@ -55,9 +58,6 @@
                 </div>
             </div>
         </div>
-
-    <!-- core content -->
-    <section id="contact">
 
         <div class="container">
 
@@ -74,22 +74,22 @@
                 <div class="col-5 center-auto">
                     <form  class= "contact" action="index.html" method="post" id="add-form">
                         <label for="name">Name</label>
-                        <input type="text" name="client" required id="client">
+                        <input type="text" name="client" required id="name">
                         <label for="phone">Phone</label>
                         <input type="text" name="phone" required id="phone">
 
                         <label for="email">Email</label>
                         <input type="text" name="email" id="email">
-                        <label for="service">Products</label>
+                        <label>Products</label>
                         <select>
                         <option value="-1" selected>Choose option ...</option>
                         <option value="Hardware">Novii Hardware Component</option>
                         <option value="App">Novii App</option>
                         </select>
-                        <label for="message">Message</label><br>
+                        <label>Message</label><br>
                         <textarea rows="5" cols="50">
                         </textarea><br>
-                            <input class ="cta-button" type="submit" value="send"></input>
+                            <input class ="cta-button" type="submit" value="send">
                       </form>
                 </div>
             </div>
@@ -144,7 +144,6 @@
             </ul>
         </div>
     </footer>
-</div>
 <script src="js/script.js"></script>
 </body>
 

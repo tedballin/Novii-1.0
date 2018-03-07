@@ -299,14 +299,14 @@ form{
 }
 
 
-#listing-row{
+.listing-row{
   width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-#listing-center-wrapper {
+.listing-center-wrapper {
   width: 100%;
   display: flex;
   align-items: center;

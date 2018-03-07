@@ -123,7 +123,6 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
 }
 
 /* start small, mobile */
@@ -621,7 +620,7 @@ a:active {
 .stats{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 4em;
 }
 .stats p{
@@ -655,9 +654,19 @@ a:active {
 
 /* product listing style */
 
+
 .product-listing {
   background-color: #FFFFFF;
-  padding: 10px;
+  padding: 1em;
+  
+}
+
+.product-text{
+  line-height: 1.6;
+}
+
+.products{
+  padding: 1em;
 }
 
 /* pushe down the price */
