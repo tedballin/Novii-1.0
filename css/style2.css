@@ -54,16 +54,10 @@ ul {
 #light1{
     width: 100px;
     height: 100px;
-    background: #aab3ab;
+    background: #3CA0CA;
     border-radius: 50%;
 }
 
-#light2{
-  width: 100px;
-  height: 100px;
-  background: #eee0b7;
-  border-radius: 50%;
-}
 
 #texture1{
     width: 100px;

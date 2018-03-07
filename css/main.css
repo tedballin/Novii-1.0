@@ -1,8 +1,8 @@
 /* fonts */
 
 @font-face {
-  font-family: "Neo Latina";
-  src: url("../font/neo-latina.ttf");
+  font-family: "Lato";
+  src: url("../font/Lato-Regular.ttf");
 }
 
 @font-face {
@@ -21,7 +21,9 @@ html {
   height: 100%;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -29,15 +31,19 @@ body {
   font-family: 'DINPro Regular', Helvetica, sans-serif;
   font-size: 1rem;
   color: #484848;
+  background-color: #FAFBFC;
 }
 
 /* safe cap */
 
-img, embed object, video {
+img,
+embed object,
+video {
   max-width: 100%;
 }
 
-nav a, button {
+nav a,
+button {
   /* make sure clickable elements are easy to tap on mobile devices */
   min-width: 48px;
   min-height: 48px;
@@ -48,7 +54,9 @@ a {
   color: #ffffff;
 }
 
-a:active, a:hover, a:focus {
+a:active,
+a:hover,
+a:focus {
   color: #1A2948;
 }
 
@@ -56,10 +64,12 @@ ul {
   list-style: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   /* neo latina doesnt show numbers  */
   /* font-family: "Neo Latina"; */
-  font-family: "DINPro Regular";
+  font-family: "Lato";
 }
 
 p {
@@ -113,6 +123,7 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
 }
 
 /* start small, mobile */
@@ -130,7 +141,8 @@ ul {
 }
 
 /* media query for menu */
-@media screen and (max-width: 720px) {
+
+@media screen and (max-width: 770px) {
   .onclick-menu {
     position: relative;
     display: flex;
@@ -141,10 +153,9 @@ ul {
     content: "menu";
     color: white;
   }
-  .onclick-menu li{
+  .onclick-menu li {
     /* so that the menu can be still seen can push more if we want, the bg color opacity helps visibility*/
     margin-top: 2%;
-
   }
   .onclick-menu:focus {
     /* clicking on label should toggle the menu */
@@ -166,7 +177,6 @@ ul {
     /* helps to add visibility */
     background-color: rgba(50, 50, 50, 0.2);
   }
-
 }
 
 /* tab + pc size */
@@ -339,7 +349,9 @@ img.header_logo {
   margin-left: 2em;
 }
 
-.nav_main a:hover, a:focus, a:active {
+.nav_main a:hover,
+a:focus,
+a:active {
   color: #1A2948;
   transition: ease-out 0.3s;
 }
@@ -362,7 +374,7 @@ img.header_logo {
   position: fixed;
   top: 0;
   z-index: 10;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 /*
@@ -392,19 +404,39 @@ img.header_logo {
  *
  */
 
+ .feature{
+   display: flex;
+   flex-wrap:wrap;
+   justify-content: center;
+ }
+
 [class *="feature_column_"] {
-  text-align: center;
-  padding: 1em;
+  text-align: left;
+  margin: 2em 3em;
+  padding: 2em;
+  max-width: 100%;
 }
 
 /* change the order under mobile view */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:770px) {
+  .feature_column_1 {
+    order: 0;
+  }
+  .feature_column_2 {
+    order: 1;
+  }
   .feature_column_3 {
     order: 3;
   }
   .feature_column_4 {
     order: 2;
+  }
+  .feature_column_5 {
+    order: 4;
+  }
+  .feature_column_6 {
+    order: 5;
   }
   .footer_col {
     width: 100%;
@@ -413,16 +445,30 @@ img.header_logo {
 
 .icon {
   width: 150px;
+  margin-bottom: 2em;
 }
 
-.feature_column img {
-  /* box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2); */
+.feature-img {
+  box-shadow:5px 5px 25px 0 rgba(46,61,73,.2)
 }
 
-.row_container h1 {
+.feature p{
+  line-height: 1.6;
+}
+
+.row_container h1,h2 {
   text-align: center;
   margin: 2rem 0;
   color: #3CA0CA;
+}
+
+.feature-card{
+  position: relative;
+  background: #fff;
+  box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
+  border-radius: .375rem;
+  transition: all .3s ease; 
+  max-height: 400px;
 }
 
 /*
@@ -433,12 +479,17 @@ img.header_logo {
 
 .testimonial {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 5em 0;
+  background-color: #F3F8F9;
+  height: 30em;
 }
-.testimonial h4{
-    color: #3CA0CA;
+
+.testimonial h4 {
+  color: #3CA0CA;
 }
 
 /*
@@ -451,12 +502,16 @@ img.header_logo {
   padding: 10em;
   background: url('../img/banner.jpg') center center no-repeat;
   background-size: cover;
+  margin-bottom: 0;
+  margin-top: 5em;
 }
 
 .cta_content {
   text-align: center;
+  line-height: 1.6;
   color: #fff;
 }
+
 
 /*
  *
@@ -467,6 +522,7 @@ img.header_logo {
 .footer {
   background: linear-gradient(to bottom right, #1A2948, #3CA0CA);
   padding: .25em 0;
+  font-size: .8em;
 }
 
 .footer_nav ul {
@@ -477,7 +533,6 @@ img.header_logo {
 }
 
 .footer_col {
-  margin: 1em;
   align-self: center;
 }
 
@@ -488,11 +543,35 @@ img.header_logo {
 
 .footer_col a {
   color: aliceblue;
+  margin-bottom:.2em;
+}
+
+.footer_col a:hover, a:focus {
+  color: #3CA0CA;
 }
 
 .footer_col img {
-  width: 60px;
+  width: 30px;
   padding: .5em;
+}
+
+.references{
+  height: 600px;
+}
+.references p{
+  line-height: 1.6;
+}
+/* blog */
+
+.text a{
+  color: #484848;
+}
+ .text a:hover, a:focus {
+  color: #3CA0CA;
+}
+
+#blog img{
+  box-shadow:5px 5px 25px 0 rgba(46,61,73,.2);
 }
 
 /* about styles */
@@ -509,12 +588,33 @@ img.header_logo {
   background-size: cover;
 }
 
-.about-us-section p
-{
- font-family: "DINPro Regular";
- font-weight: 100;
-
+.about-img{
+  max-width: 100%;
+  max-height: 28em;
+  overflow: hidden;
+  object-fit: fill;
 }
+
+.about-us-section{
+  padding:2em;
+}
+
+.stats{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4em;
+}
+.stats p{
+  text-align: center;
+}
+
+.about-us-section p {
+  font-family: "DINPro Regular";
+  font-weight: 100;
+  line-height: 1.6;
+}
+
 /* map styles */
 
 /* https://www.ostraining.com/blog/coding/responsive-google-maps/ */
@@ -543,11 +643,10 @@ img.header_logo {
 
 /* pushe down the price */
 
-.push-down{
+.push-down {
   overflow: hidden;
   bottom: 0;
 }
-
 
 .price-style {
   width: 100%;
@@ -567,15 +666,16 @@ img.header_logo {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
   color: #3CA0CA;
 }
 
-.contact input[type=text], textarea {
+
+.contact input[type=text],
+textarea {
   border: 2px solid#3CA0CA;
   border-radius: 5px;
 }
-
-
 
 /* buttons  */
 
@@ -584,13 +684,15 @@ img.header_logo {
   color: #3CA0CA;
   background-color: #fff;
   border-radius: 5px;
-  /* box-shadow: 5px 10px 20px 0px #333; */
+  box-shadow: 5px 10px 20px 0px #333;
   display: inline;
   cursor: pointer;
 }
 
-.nav-button:hover, :focus, :active {
-  /* box-shadow: 3px 5px 20px 0px #333; */
+.nav-button:hover,
+:focus,
+:active {
+  box-shadow: 3px 5px 20px 0px #333;
   transition: ease .3s;
 }
 
