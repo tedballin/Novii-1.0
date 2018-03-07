@@ -193,7 +193,7 @@ ul {
 
 /* tab + pc size */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 770px) {
   .col-1 {
     -ms-flex: 0 0 8.333333%;
     flex: 0 0 8.333333%;
@@ -693,6 +693,7 @@ a:active {
 textarea {
   border: 2px solid#3CA0CA;
   border-radius: 5px;
+  width: 100%;
 }
 
 /* buttons  */
