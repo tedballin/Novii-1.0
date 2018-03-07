@@ -264,6 +264,11 @@ ul {
   margin-left: auto !important;
 }
 
+.center-vertically {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
 /* end of grid */
 
 /*
@@ -481,7 +486,7 @@ a:active {
   background: #fff;
   box-shadow: 5px 5px 25px 0 rgba(46,61,73,.2);
   border-radius: .375rem;
-  transition: all .3s ease; 
+  transition: all .3s ease;
   max-height: 400px;
 }
 
@@ -687,6 +692,27 @@ a:active {
 
   color: #3CA0CA;
 }
+
+/* extra stylign for forms */
+.order{
+  padding-left: 20px;
+}
+.order label, div, form{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.contact-row{
+  display: flex;
+  display: wrap;
+  flex-direction: row;
+
+}
+.contact-row input, span{
+  padding-top: 5px;
+  font-size: 0.8em;
+  margin-right: 10px;
+}
+
 
 
 .contact input[type=text],
