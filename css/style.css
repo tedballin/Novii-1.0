@@ -1,8 +1,8 @@
 /* fonts */
 
 @font-face {
-  font-family: "Neo Latina";
-  src: url("../font/neo-latina.ttf");
+  font-family: "Lato";
+  src: url("../font/Lato-Regular.ttf");
 }
 
 @font-face {
@@ -125,7 +125,6 @@ textarea {
 a:visited,
 a:hover {
   text-decoration: none;
-  color: #fff;
 }
 
 .header-nav li:hover {
@@ -250,9 +249,9 @@ justify-content: space-around
 
 /*    id    */
 
-#neo-latina {
+#lato {
   color: #3CA0CA;
-  font-family: "Neo Latina";
+  font-family: "Lato";
   font-size: 1.5rem;
 }
 
@@ -294,7 +293,7 @@ justify-content: space-around
 #white2 {
   width: 100px;
   height: 100px;
-  background: #FFFFFF;
+  background: #FAFBFC;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -309,7 +308,7 @@ justify-content: space-around
 #light-bg {
   width: 100px;
   height: 100px;
-  background: #F2F6F8;
+  background: linear-gradient(to bottom right, #1A2948, #3CA0CA);;
   border: 1px solid black;
   border-radius: 50%;
 }

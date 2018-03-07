@@ -9,35 +9,45 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans|Raleway" rel="stylesheet">
 </head>
 
 <body>
-    <div class="main-header-wrap">
-
-        <div class="main-header-logo">
-            <img src="img/logo.png" alt="logo">
+<!-- navigation -->
+<header class="col-12 header" id="site_header">
+        <div class="header_navbar">
+          <div class="col-2">
+            <a href="index.html">
+                        <img class="header_logo" src="img/logo_horizontal.png" alt="icon">
+                    </a>
+          </div>
+          <nav class="col-10 nav_main">
+  
+            <div tabindex="0" class="onclick-menu">
+                <ul class="onclick-menu-content">
+                  <li class="nav_item">
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="product.html">Product</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav_item">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav_item">
+                    <a class="nav-button" href="product.html">Join Today</a>
+                  </li>
+                </ul>
+            </div>
+  
+          </nav>
         </div>
-
-
-        <div class="header-nav">
-            <ul class="main-nav">
-                <li>
-                    <a href="index.html">Web</a>
-                </li>
-                <li>
-                    <a href="wireframes.html">Wireframes</a>
-                </li>
-                <li>
-                    <a href="sitemap.html">Sitemap</a>
-                </li>
-                <li>
-                    <a href="reference.html"> Citation</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+      </header>
 
     <div class="main-content">
         <div class="size1of4">
@@ -77,15 +87,12 @@
                             <h1>
                                 Header Level I
                             </h1>
-                            <h2>
-                                Header Level II
-                            </h2>
                             <h3>
                                 Header Level III
                             </h3>
                         </div>
                         <div class="">
-                            <h3 id="neo-latina">Neo Latina</h3>
+                            <h3 id="lato">Lato</h3>
                             <h3>Content</h3>
                             <p>
                                 Novii’s mobile application provides a platform for exercisers to find right personal trainers, train with flexible schedule
@@ -121,46 +128,20 @@
                 <div class="bg-color">
                     <div id="light-bg">
                     </div>
-                    <p>#F2F6F8</p>
+                    <p>linear-gradient(to bottom right, #1A2948, #3CA0CA);</p>
                     <div id="white2">
                     </div>
-                    <p>#FFFFFF</p>
+                    <p>#FAFBFC</p>
                 </div>
-                <h2>Misc Colours</h2>
-                <h3>Text Color</h3>
-                <div class="text-color">
-                    <div id="dark">
-                    </div>
-                    <p>#484848</p>
-                    <div id="black">
-                    </div>
-                    <p>#000000</p>
-                </div>
+               
                 <div class="row">
                     <div class="content-in-grid">
                         <h3>Highlights</h3>
                         <div class="highlights">
                             <div id="light1">
                             </div>
-                            <p>#aab3ab</p>
-                            <div id="light2">
-                            </div>
-                            <p>#eee0b7</p>
-                        </div>
+                            <p>#3CA0CA</p>                            
                     </div>
-                    <div class="content-in-grid">
-                        <h3>Texture Colours</h3>
-                        <div class="texture">
-                            <div id="texture1">
-                            </div>
-                            <p>#e8caaf</p>
-                            <div id="texture2">
-                            </div>
-                            <p>#66442c</p>
-                        </div>
-                    </div>
-
-                </div>
             </section>
 
             <section id="navigation">
@@ -191,24 +172,7 @@
                 <button class="nav-button">Nav Button</button>
                 <button class="cta-button">Call To Action</button>
             </section>
-            <section>
-                <h2>Other Button Stylings</h2>
 
-                <div class="row">
-                    <div class="content-in-grid">
-                        <h3>Rendered element:</h3>
-                        <button class="buttonstyle1" type="button">Style 1</button>
-                    </div>
-                    <div class="content-in-grid">
-                        <h3>CSS selector:</h3>
-                        <p>".buttonstyle1"</p>
-                    </div>
-                    <div class="content-in-grid">
-                        <h3>Sample code:</h3>
-                        <code>&lt;button class="buttonstyle1" type="button"&gt;Button Style&lt;/button&gt;</code>
-                    </div>
-                </div>
-            </section>
 
 
             <section id="link">
@@ -288,46 +252,6 @@
                 </div>
             </section>
 
-            <section>
-                <h2>Other Navigation Bar</h2>
-                <p>
-                    Different style of nav bar
-                </p>
-                <h3>Rendered content:</h3>
-                <br />
-                <div class="row">
-                    <div class="main-header">
-                        <ul class="">
-                            <li class="active">
-                                <a href="#">Navigation Menu Item A</a>
-                            </li>
-                            <li>
-                                <a href="#">Navigation Menu Item B</a>
-                            </li>
-                            <li>
-                                <a href="#">Navigation Menu Item C</a>
-                            </li>
-                            <li>
-                                <a href="#">Navigation Menu Item D</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="content-in-grid">
-                        <h3>CSS selector:</h3>
-                        <p>".main-header"</p>
-                    </div>
-                    <div class="content-in-grid">
-                        <h3>Sample code:</h3>
-                        <code>&lt;ul class="main-header"&gt;
-                            <br /> &lt;li&gt;&lt;a href="#" &gt;Nav Menu Item A&lt;/a&gt;&lt;/li&gt;
-                            <br /> &lt;li&gt;&lt;a href="#" &gt;Nav Menu Item B&lt;/a&gt;&lt;/li&gt;
-                            <br /> &lt;/ul&gt;
-                        </code>
-                    </div>
-                </div>
-            </section>
 
             <section>
                 <h2>Product Listing</h2>
@@ -386,30 +310,57 @@
                 </div>
 
             </section>
-
-            <section id="imagery">
-                <h2>Imagery</h2>
-                <h3>Logo</h3>
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                </div>
-
-                <h3>Mockups</h3>
-                <div class="mockup-img">
-                    <img src="img/mockup.png" alt="">
-                    <img src="img/mockup2.png" alt="">
-                    <img src="img/mockup3.png" alt="">
-                </div>
-            </section>
         </div>
     </div>
     <!-- button goes to the top  -->
-    <a onclick="topFunction()" href="#" id="to-top">
+    <!-- <a onclick="topFunction()" href="#" id="to-top">
         <img src="img/up-arrow.png" alt="">
-    </a>
-
+    </a> -->
+    <footer class="col-12 footer">
+            <div class="footer_nav">
+                <ul>
+                    <li class="footer_col">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li>
+                                <a href="#">+1 (778) 778 - 0000</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@novii.com">info@novii.com</a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    suite #2018,
+                                    <br> 1008 W Pender St,
+                                    <br> Vancouver,BC
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer_col">
+                        <p>Novii &copy 2018 All Rights Reserved</p>
+                        <a href="styleguide.html">Style Guide</a><br>
+                        <a href="references.html">References</a><br>
+                        <a href="https://github.com/tedballin/Novii-1.0" target="_blank">Git Link</a>
+                    </li>
+                    <li class="footer_col">
+                        <h3>Social Media</h3>
+                        <a href="#">
+                            <img class="sm-img" src="img/twitter.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/instagram.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/linkedin.png" alt="social media icon">
+                        </a>
+                        <a href="#">
+                            <img class="sm-img" src="img/facebook.png" alt="social media icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     <script src="js/script.js"></script>
 </body>
 
